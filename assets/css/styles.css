@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
 
+
 /* Variables */
 :root {
   --font-family: "Roboto", sans-serf;
@@ -184,48 +185,84 @@ nav ul li {
 }
 /* Skills section ends */
 
-/* Projects section */
+/* Projects Section */
 .projects {
-  background-color: var(--bg-color);
-  padding: 32px 0;
-  margin-top: 2rem;
-}
-
-.project-pic {
-  width: 65%;
-  height: 60%;
-}
-
-.projects-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInUp 1s forwards ease-out;
+  animation-delay: 1s;
 }
 
 .projects-title {
-  text-align: center;
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-pic {
+  width: 100%;
+  border-radius: 5px;
   margin-bottom: 1rem;
 }
 
-.project-container {
-  text-align: center;
-  width: 21.875rem;
-  padding: 1rem;
-}
-
-.project-container p {
-  padding: 0.4rem;
-}
-
 .project-title {
-  margin-bottom: var(--bottom-margin);
+  font-size: 1.5rem;
+  color: #1abc9c;
+  margin-bottom: 0.5rem;
 }
 
 .project-details {
-  margin-bottom: var(--bottom-margin);
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
-/* Projects section ends */
+.project-link {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #1abc9c;
+}
+
+/* Certifications Section */
+.certifications {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInUp 1s forwards ease-out;
+  animation-delay: 1.2s;
+}
+
+.certifications .projects-title {
+  color: #1abc9c;
+}
 
 /* Contacts section */
 .contact {
@@ -345,6 +382,8 @@ footer {
   padding: 20px;
   margin: 10px;
 }
+
+
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 720px) {
