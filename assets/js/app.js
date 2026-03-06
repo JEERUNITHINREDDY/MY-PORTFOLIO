@@ -29,3 +29,15 @@ scrollUp.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// Toggle project details on mobile
+function toggleDetails(button) {
+  const details = button.nextElementSibling;
+  if (details.classList.contains('expanded')) {
+    details.classList.remove('expanded');
+    button.textContent = 'View More';
+  } else {
+    details.classList.add('expanded');
+    button.textContent = 'View Less';
+  }
+}
